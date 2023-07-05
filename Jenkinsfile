@@ -4,7 +4,7 @@ pipeline{
         registry = "bsg0108/my-image"
         registrycredentials = 'docker-credentials'
     }
-    agent any
+    agent {label "jenkins-slave"}
     stages {
         stage("git clone"){
             steps{
